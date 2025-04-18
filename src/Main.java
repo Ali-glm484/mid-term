@@ -45,7 +45,7 @@ public class Main {
     private static void testRegularUser(User user, Music music) throws InvalidOperationException {
         try {
             System.out.println("Attempting to create playlist as regular user:");
-            user.createPlaylist("My Fav", user);
+            user.createPlaylist("My Fav");
         } catch (InvalidOperationException e) {
             System.out.println("Expected error: " + e.getMessage());
         }
@@ -73,7 +73,7 @@ public class Main {
 
     private static void testPremiumUser(User user, Music music) throws InvalidOperationException {
         System.out.println("Creating playlist as premium user:");
-        user.createPlaylist("Pro Playlist", user);
+        user.createPlaylist("Pro Playlist");
         System.out.println("Number of playlists: " + user.getPlaylists().size());
 
         System.out.println("\nUnlimited playback test:");

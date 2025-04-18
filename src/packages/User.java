@@ -43,8 +43,8 @@ public class User {
         System.out.println("User successfully added to the following list.");
     }
 
-    public void createPlaylist (String title, User owner) throws InvalidOperationException{
-        this.behavior.createPlaylist(title, owner);
+    public void createPlaylist (String title) throws InvalidOperationException{
+        this.behavior.createPlaylist(title, this);
     }
 
     public void playMusic (Music music) throws InvalidOperationException {
