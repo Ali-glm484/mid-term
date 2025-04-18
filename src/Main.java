@@ -66,7 +66,7 @@ public class Main {
 
     private static void testPremiumUpgrade(User user) throws InvalidOperationException {
         System.out.println("Purchasing premium (6 months):");
-        user.buyPremium(user, 6);
+        user.buyPremium(6);
         System.out.println("Account type after upgrade: " +
                 (user.getBehavior() instanceof PremiumBehavior ? "Premium" : "Regular"));
     }

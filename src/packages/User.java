@@ -51,8 +51,8 @@ public class User {
         this.behavior.playMusic(music);
     }
 
-    public void buyPremium (User owner, int month) throws InvalidOperationException {
-        this.behavior.buyPremium(owner, month);
+    public void buyPremium (int month) throws InvalidOperationException {
+        this.behavior.buyPremium(this, month);
     }
 
     public String getUsername () {
